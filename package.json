@@ -4,12 +4,19 @@
   "description": "Shoe store PSD template to full website using MEAN",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "html": "cp app.client/index.html public/",
+    "build-css": "./bin/build-css",
+    "assets": "cp -R app.client/assets/ public/assets/",
+    "app": "cp -R app.client/app/ public/app/",
+    "serve": "node ./app",
+    "start": "npm run html && npm run build-css && npm run assets && npm run app && npm run serve"
   },
   "author": "Ariel Blanco",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "mongoose": "^4.6.2",
@@ -18,6 +25,7 @@
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.1.1",
     "node-sass": "^3.10.1",
     "nodemon": "^1.10.2"
   }

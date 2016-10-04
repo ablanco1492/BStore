@@ -5,7 +5,7 @@ const express     = require('express'),
       morgan 			= require('morgan'),
       bodyParser  = require('body-parser'),
       dbURI       = 'mongodb://localhost:27017/productApp',
-      routes      = require('./api/routes/apiRoutes'),
+      routes      = require('./app.api/routes/apiRoutes'),
       path        = require('path'),
       app         = express();
 
@@ -17,7 +17,12 @@ const express     = require('express'),
 app.use(morgan('dev'));
 
 // serve static files
-app.use(express.static(path.join(__dirname, 'app.client')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/vendor/bootstrap/', express.static(__dirname + '/node_modules/bootstrap-sass/assets/javascripts/'));
+app.use('/vendor/angular/', express.static(__dirname + '/node_modules/angular/'));
+app.use('/vendor/angular-route/', express.static(__dirname + '/node_modules/angular-route/'));
+app.use('/vendor/jquery/', express.static(__dirname + '/node_modules/jquery/dist/'));
+
 
 // form body parsers
 // parse application/x-www-form-urlencoded 

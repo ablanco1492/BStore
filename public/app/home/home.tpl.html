@@ -1,0 +1,271 @@
+<main class="container-fluid">
+    <div class="container container_card">
+        <div class="row">
+            <div class="col-md-12 page-title">
+                <h2 class="page-title__heading">{{vm.title}}</h2>
+
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-12  filter">
+
+                <div class="col-md-2 col-md-offset-5">
+                    <p class="filter__results">696 shoes</p>
+                </div>
+                <div class="col-md-2 pull-right">
+                    <div class="dropdown filter__dropdown">
+                        <button class="btn dropdown-toggle filter__dropdown__button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+
+    Most Popular
+    <span class="caret"></span>
+  </button>
+                        <ul class="dropdown-menu filter__dropdown__list" aria-labelledby="dropdownMenu1">
+                            <li class="filter__dropdown__list__list-item"><a href="#">Most Popular</a></li>
+                            <li class="filter__dropdown__list__list-item"><a href="#">Most Expensive</a></li>
+                            <li class="filter__dropdown__list__list-item"><a href="#">By name</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row cards">
+            <card-directive ng-repeat="card in home.cards"></card-directive>
+            <div class="logo-filter" id="logo-filter" data-toggle="modal" data-target="#myModal">
+
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content modal-shoes">
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Shoes</h6>
+                                    <ul>
+                                        <li>
+                                            Boat Shoes
+                                        </li>
+                                        <li>
+                                            Moccasins
+                                        </li>
+                                        <li>
+                                            Boots
+                                        </li>
+                                        <li>
+                                            Espadrilles
+                                        </li>
+                                        <li>
+                                            Lace ups
+                                        </li>
+                                        <li>
+                                            Loafers
+                                        </li>
+                                        <li>
+                                            Monkstraps
+                                        </li>
+                                        <li>
+                                            Sandals
+                                        </li>
+                                        <li>
+                                            Sneakers
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="block-size-shoes">
+                                        <h6>Size</h6>
+                                        <ul class="modal-size  clearfix">
+                                            <li class="modal-size__squared">
+                                                4
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                5
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                6
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                7
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                7,5
+                                            </li>
+                                        </ul>
+
+                                        <ul class="modal-size clearfix">
+                                            <li class="modal-size__squared">
+                                                8
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                8,5
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                9
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                9,5
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                10
+                                            </li>
+                                        </ul>
+
+                                        <ul class="modal-size clearfix">
+                                            <li class="modal-size__squared">
+                                                10,5
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                11
+                                            </li>
+                                            <li class="modal-size__squared">
+                                                12
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h6>Colors</h6>
+                                        <ul class="clearfix">
+                                            <li class="modal_squared modal_squared-color modal_squared-color-pink">
+
+                                            </li>
+                                            <li class="modal_squared modal_squared-color modal_squared-color-purple">
+                                            </li>
+                                            <li class="modal_squared modal_squared-color modal_squared-color-blue">
+                                            </li>
+                                            <li class="modal_squared modal_squared-color modal_squared-color-yellow">
+                                            </li>
+                                            <li class="modal_squared modal_squared-color modal_squared-color-orange">
+                                            </li>
+                                        </ul>
+
+                                        <ul class="clearfix">
+                                            <li class="modal_squared modal_squared-color modal_squared-color-brown">
+
+                                            </li>
+                                            <li class="modal_squared modal_squared-color modal_squared-color-red">
+                                            </li>
+                                            <li class="modal_squared modal_squared-color modal_squared-color-gray">
+                                            </li>
+                                            <li class="modal_squared modal_squared-color modal_squared-color-white">
+                                            </li>
+                                            <li class="modal_squared modal_squared-color modal_squared-color-black">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <h6>Brands</h6>
+
+                                    <ul class="modal-brand__left">
+                                        <li>
+                                            A.P.C
+                                        </li>
+                                        <li>
+                                            Acne Studios
+                                        </li>
+                                        <li>
+                                            Adidas Original
+                                        </li>
+                                        <li>
+                                            Arcteryx Veilance
+                                        </li>
+                                        <li>
+                                            Bianca Chadon
+                                        </li>
+                                        <li>
+                                            Cmm Swdn
+                                        </li>
+                                        <li>
+                                            Comme des Garçons
+                                        </li>
+                                        <li>
+                                            Common Projects
+                                        </li>
+                                        <li>
+                                            Converse
+                                        </li>
+                                        <li>
+                                            Cuttler and Gross
+                                        </li>
+
+                                        <li>
+                                            Dime
+                                        </li>
+
+                                        <li>
+                                            Engineered
+                                        </li>
+                                        <li>
+                                            Garments
+                                        </li>
+                                        <li>
+                                            Eytys
+                                        </li>
+                                        <li>
+                                            Kris Van Assche
+                                        </li>
+                                    </ul>
+                                    <ul class="clearfix">
+                                        <li>
+                                            Maison Margiela
+                                        </li>
+                                        <li>
+                                            New Balance
+                                        </li>
+                                        <li>
+                                            Nike
+                                        </li>
+                                        <li>
+                                            Our Legacy
+                                        </li>
+                                        <li>
+                                            Proper Gang
+                                        </li>
+                                        <li>
+                                            Puma
+                                        </li>
+                                        <li>
+                                            Raf Simons
+                                        </li>
+                                        <li>
+                                            Rick Owens
+                                        </li>
+                                        <li>
+                                            Supreme
+                                        </li>
+                                        <li>
+                                            Undercover
+                                        </li>
+                                        <li>
+                                            Vans
+                                        </li>
+                                        <li>
+                                            Visvim
+                                        </li>
+                                        <li>
+                                            Wtaps
+                                        </li>
+
+                                        <li>
+                                            Y-3
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="logo-filter_modal" class="logo-filter_modal" data-toggle="modal" data-target="#myModal">
+
+            </div>
+        </div>
+</main>
