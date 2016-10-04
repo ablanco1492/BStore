@@ -17,7 +17,7 @@ const express     = require('express'),
 app.use(morgan('dev'));
 
 // serve static files
-app.use(express.static(path.join(__dirname, 'app.client')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // form body parsers
 // parse application/x-www-form-urlencoded 

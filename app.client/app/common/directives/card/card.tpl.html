@@ -1,5 +1,5 @@
 <div ng-class="(product.description.length || product.showOff) ? 'col-md-6 col-sm-12' : 'col-md-3 col-sm-12'">
-    <div class="container--light-background card-container container-padded" ng-click="card.selected = !card.selected">
+    <div class="container--light-background card-container container-padded" ng-click="selected = !selected">
         <ng-switch on="product.description.length">
 
             <div class="row detailed__row" ng-switch-when="true">
@@ -9,7 +9,9 @@
 
                 <div class="col-md-6 col-sm-6 ">
                     <div class="card-container__tags tags--detailed" ng-if="product.tags.length > 0">
+                        <i class="zmdi zmdi-favorite tags__icon pull-left" ng-if="selected"></i>
                         <span class="card-container__tag" ng-repeat="tag in product.tags" ng-class="'card-container__tag--green': tag.color=='green', 'card-container__tag--blue': tag.color == 'blue''">{{tag.text}}</span>
+                        <i class="zmdi zmdi-shopping-basket tags__icon pull-right" ng-if="selected"></i>
                     </div>
                     <div class="card-container__content content--detailed">
                         <h3 class="card-container__title">{{product.name}}</h3>

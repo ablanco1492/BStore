@@ -1,20 +1,20 @@
-// todo directive
+// card directive
 
 (function() {
   'use strict';
 
   angular
     .module('testApp')
-    .directive('todoItem', todoItem);
+    .directive('cardItem', todoItem);
 
   function todoItem() {
     var directive = {
       restrict: 'E',
       replace: false,
-      templateUrl: 'common/directives/todo/todo.tpl.html',
+      templateUrl: 'common/directives/card/card.tpl.html',
       scope: {
-        'val'       : '=',
-        'removetodo': '&'
+        'product'       : '=',
+        selected: false
       }
     };
 

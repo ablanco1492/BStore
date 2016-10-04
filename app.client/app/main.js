@@ -1,4 +1,6 @@
 // main app module
+const bootstrap = require ('bootstrap');
+const angular = require('angular');
 
 (function() {
   'use strict';
@@ -11,11 +13,6 @@
           templateUrl: 'home/home.tpl.html',
           controller: 'HomeCtrl',
           controllerAs: 'home' 
-        })
-        .when('/about', {
-          templateUrl: 'about/about.tpl.html',
-          controller: 'AboutCtrl',
-          controllerAs: 'about' 
         });
     
       // use the HTML5 History API
