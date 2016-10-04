@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular test</title>
+  <base href="/">
+</head>
+<body>
+
+  <header-directive></header-directive>
+
+  <div ng-view></div>
+
+  <footer-directive></footer-directive>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+  <script src="main.js"></script>
+  <script src="home/home.ctrl.js"></script>
+  <script src="about/about.ctrl.js"></script>
+  <script src="common/directives/header/header.directive.js"></script>
+  <script src="common/directives/todo/todo.directive.js"></script>
+  <script src="common/services/todo.data.js"></script>
+</body>
+</html>

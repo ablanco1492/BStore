@@ -1,0 +1,39 @@
+<div ng-class="(product.description.length || product.showOff) ? 'col-md-6 col-sm-12' : 'col-md-3 col-sm-12'">
+    <div class="container--light-background card-container container-padded" ng-click="card.selected = !card.selected">
+        <ng-switch on="product.description.length">
+
+            <div class="row detailed__row" ng-switch-when="true">
+                <div class="col-md-6 col-sm-6">
+                    <img class="img-responsive img--detailed" src="product.imgUrl" alt="">
+                </div>
+
+                <div class="col-md-6 col-sm-6 ">
+                    <div class="card-container__tags tags--detailed" ng-if="product.tags.length > 0">
+                        <span class="card-container__tag" ng-repeat="tag in product.tags" ng-class="'card-container__tag--green': tag.color=='green', 'card-container__tag--blue': tag.color == 'blue''">{{tag.text}}</span>
+                    </div>
+                    <div class="card-container__content content--detailed">
+                        <h3 class="card-container__title">{{product.name}}</h3>
+                        <p class="card-container__subtitle">{{product.model}}</p>
+                        <p class="card-container__description">{{product.description}}</p>
+                        <p class="card-container__price">{{product.price | currency}}<span class="striketrough" ng-if="product.price.length">{{product.previousPrice | currency}}</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-default>
+                <div class="card-container__tags tags--detailed" ng-if="product.tags.length > 0">
+                    <span class="card-container__tag" ng-repeat="tag in product.tags" ng-class="'card-container__tag--green': tag.color=='green', 'card-container__tag--blue': tag.color == 'blue''">{{tag.text}}</span>
+                </div>
+                <div class="card-container__content">
+                    <img class="img-responsive card-container__img" src="product.imgUrl" alt="">
+                    <h3 class="card-container__title">{{product.name}}</h3>
+                    <p class="card-container__subtitle">{{product.model}}</p>
+                    <p class="card-container__description">{{product.description}}</p>
+                    <p class="card-container__price">{{product.price | currency}}<span class="striketrough" ng-if="product.price.length">{{product.previousPrice | currency}}</span></p>
+                </div>
+            </div>
+        </ng-switch>
+
+    </div>
+
+</div>

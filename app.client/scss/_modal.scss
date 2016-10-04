@@ -1,0 +1,181 @@
+.modal-content.modal-shoes
+{
+    background-color: $modal-background;
+    height: em(1964px);
+}
+.modal-dialog
+{
+    margin: 0;
+}
+
+.modal-shoes 
+{
+    h6
+    {
+       font-size: em(14px);
+       font-family: dinnextltpro;
+       text-transform: uppercase;
+       font-family: 'DIN';
+       color: $accent-color;
+       padding-bottom: em(20px);
+    }
+
+    li 
+    {
+       font-size: em(18px);
+       font-family: 'DIN';
+       text-transform: uppercase;
+       color: #555556;
+       list-style: none;
+       margin-bottom: em(16px);
+    }
+
+    ul
+    {
+        padding: em(0px);
+    }
+}
+
+.block-size-shoes{
+    margin-bottom: em(60px);
+}
+
+.modal_squared
+{
+    width: em(40px);
+	height: em(40px);
+    float: left;
+}
+
+.modal-size
+{
+    .modal-size__squared 
+    {
+        width: em(40px);
+        height: em(40px);
+        border: em(1px) solid #303030;
+        float:left;
+        margin-right: em(10px);
+        text-align: center;
+        padding-top: em(10px);
+        font-family: 'DIN';
+        color: $accent-color; 
+
+        &:hover
+        {
+            background-color: $accent-color; 
+            color: #000;
+        }
+    }
+}
+
+
+.modal_squared-color
+{
+    @extend .modal_squared;
+    margin-right: em(10px);
+    padding-top: em(10px);
+    font-family: 'DIN';
+}
+
+.modal_squared-color-pink
+{
+    @extend .modal_squared-color;
+    background-color: #ff00a3;  
+}
+
+.modal_squared-color-purple
+{
+    @extend .modal_squared-color;
+    background-color: #9d00ff;  
+}
+
+.modal_squared-color-blue
+{
+    @extend .modal_squared-color;
+    background-color: #0000ff;  
+}
+
+.modal_squared-color-yellow
+{
+    @extend .modal_squared-color;
+    background-color: #fff200;  
+}
+
+.modal_squared-color-orange
+{
+    @extend .modal_squared-color;
+    background-color: #ff7200;  
+}
+
+.modal_squared-color-brown
+{
+    @extend .modal_squared-color;
+    background-color: #5f401d;  
+}
+
+.modal_squared-color-red
+{
+    @extend .modal_squared-color;
+    background-color: #ff0000;  
+}
+
+.modal_squared-color-gray
+{
+    @extend .modal_squared-color;
+    background-color: #9c9c9c;  
+}
+
+.modal_squared-color-white
+{
+    @extend .modal_squared-color;
+    background-color: $accent-color;  
+}
+
+.modal_squared-color-black
+{
+    @extend .modal_squared-color;
+    background-color: #000;  
+}
+
+
+.logo-filter {
+    
+    height:em(70px);
+    position:absolute;
+    z-index: 1;
+    background-image: url('../images/ellipse.png');
+    width:em(70px);
+    left:49%;
+    top:30%;
+    margin-left:-25px;
+     &:hover{
+        cursor: pointer;
+    }
+}
+
+.logo-filter_modal
+{
+    height:em(70px);
+    position:absolute;
+    z-index: 1;
+    background-image: url('../images/valid_check.png');
+    width:em(70px);
+    left:50%;
+    top:125%;
+    margin-left:-25px;
+    &:hover{
+        cursor: pointer;
+    }
+    
+}
+
+.modal-brand__left
+{
+    float: left;
+    margin-right: em(73px);
+}
+
+
+
+

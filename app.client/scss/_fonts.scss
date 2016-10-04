@@ -1,0 +1,27 @@
+@font-face 
+{
+  font-family: 'DIN';
+  src: url(../fonts/DINNextLTPro-MediumCond.otf) ;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+
+body{
+    font-family: 'DIN';
+}
+
+
+
+.zmdi:hover{
+    color: $primary-color;
+    cursor:pointer;
+}
+
+
+
+
+.striketrough{
+    text-decoration: line-through;
+    color: $salmon-color;
+}

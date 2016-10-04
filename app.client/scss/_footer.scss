@@ -1,0 +1,81 @@
+.text-input{
+    background: transparent;
+    border-bottom: em(2px) solid $darker-gray-color;
+}
+
+.text-input__icon-addon{
+    background: transparent;
+    border: 0;
+    color: $darker-gray-color;
+}
+
+.text-input__input{
+    background: transparent;
+    border: 0;
+}
+.text-input__input:focus {
+    box-shadow: none;
+}
+
+.sitemap.list-unstyled
+{
+    li
+    {
+        margin-bottom: em(15px);
+        font-size: em(14px);
+    }
+}
+
+.copy-right
+{
+    margin-top: em(55px);
+    font-family: Roboto;
+    font-size: em(12px);
+    margin-bottom: em(-15px);
+}
+
+footer
+{
+    .form-control
+    {
+        padding-left: em(0px);
+        font-family: Roboto;
+    }
+
+    .zmdi
+    {
+        padding-right: em(0px);
+    }
+
+    .input-group-addon{
+        padding-left: em(0px);
+    }
+
+    .list-item--bordered
+    {
+        margin-right: em(12px);
+    }
+    .input-group.text-input
+    {
+        width: 85%;
+        padding-bottom: em(15px);
+    }
+
+    ul.container-social
+    {
+        margin-bottom: em(30px);
+    }
+
+    .input-group.text-input
+    {
+        .input-group-addon
+        {
+            padding-top: em(0px);
+            padding-bottom: em(0px);
+
+        }
+    }
+    
+}
+
+

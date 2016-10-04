@@ -1,0 +1,72 @@
+body{
+padding: em(50px) 0;
+
+}
+
+//Bootrap Overrides
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.container{
+    // max-width: 1280px;
+}
+
+.navbar-brand{
+    padding: 0;
+}
+
+
+//End of bootstrap overrides
+
+
+
+.l-container {
+    padding:  em(40px);
+    text-transform: uppercase;
+}
+
+.l-container--footer{
+    background-color: $dark-background-color;
+    color: $lighter-gray-color;
+}
+
+.container--light-background {
+    background-color: $accent-color;
+}
+
+.container--promo-background{
+    background: url(../images/ad_background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-padded{
+        margin-bottom: em(20px);
+        padding-left: em(10px);
+        padding-right: em(10px);
+}
+
+
+.list-item--inline{
+    display:inline-block;
+}
+.list-item--bordered{
+    border: (1px) solid $darker-gray-color;
+    max-height: em(50px);
+    width: em(50px);
+    text-align: center;
+    line-height: em(50px);
+    margin-left: em(-5px);
+    margin-right: em(5px);
+    &>i{
+        vertical-align: middle;
+        line-height: inherit;
+    }
+}
+
+
+

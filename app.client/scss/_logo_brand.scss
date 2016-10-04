@@ -1,0 +1,56 @@
+
+.logo-branding
+{
+    width: em(50px);
+    height: em(50px);
+    margin-right: em(30px);
+}
+
+
+.navbar-default {
+    border-color:transparent;
+}
+
+
+.menu__item
+{
+    li:hover 
+    {
+        border-bottom: em(4) solid $primary-color;
+        color: $primary-color; 
+    }
+
+    li:active 
+    {
+        border-bottom: em(4) solid $primary-color;
+        color: $primary-color; 
+    }
+
+}
+
+.menu__item-right
+{
+    a:hover 
+        {
+            color: $primary-color; 
+        }   
+}
+
+
+.navbar-default{
+    background-color: transparent;
+}
+
+.nav > li {
+    margin-right: em(40px);
+    &:last-child
+    {
+        margin-right: em(0px);
+    }
+}
+
+
+.nav .navbar-nav .navbar-left
+{
+    color: #fff;
+}

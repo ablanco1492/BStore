@@ -1,0 +1,15 @@
+
+<main>
+  <h1>{{ home.title }}</h1>
+
+  <section class="todo-list">
+
+    <input type="text" placeholder="Write something..." ng-model="home.newTodo">
+    <button ng-click="home.addTodo()">Add Todo</button>
+
+    <ul id="todos">
+      <todo-item ng-repeat="todo in home.todoList.data track by $index" val="todo" removetodo="home.removeTodo(todo.id)"></todo-item>
+    </ul>
+
+  </section>
+</main>
