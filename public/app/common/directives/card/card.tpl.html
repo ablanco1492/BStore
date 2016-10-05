@@ -26,7 +26,7 @@
                         <h3 class="card-container__title">{{product.name}}</h3>
                         <p class="card-container__subtitle">{{product.model}}</p>
                         <p class="card-container__description">{{product.description}}</p>
-                        <p class="card-container__price">{{product.price | currency}}<span class="striketrough" ng-if="product.price.length">{{product.previousPrice | currency}}</span></p>
+                        <p class="card-container__price">{{product.price | currency}}<span class="striketrough" ng-if="product.previousPrice != null">{{product.previousPrice | currency}}</span></p>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
                     <h3 class="card-container__title">{{product.name}}</h3>
                     <p class="card-container__subtitle">{{product.model}}</p>
                     <p class="card-container__description">{{product.description}}</p>
-                    <p class="card-container__price">{{product.price | currency}}<span class="striketrough" ng-if="product.price.length">{{product.previousPrice | currency}}</span></p>
+                    <p class="card-container__price">{{product.price | currency}}<span class="striketrough" ng-if="product.previousPrice != null ">{{product.previousPrice | currency}}</span></p>
                 </div>
             </div>
         </ng-switch>

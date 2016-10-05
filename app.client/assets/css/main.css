@@ -5828,7 +5828,8 @@ body {
 
 .striketrough {
   text-decoration: line-through;
-  color: #fc7070; }
+  color: #fc7070;
+  margin-left: 0.3125em; }
 
 body {
   padding: 3.125em 0; }

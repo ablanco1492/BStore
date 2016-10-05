@@ -8,8 +8,9 @@
     "build-css": "./bin/build-css",
     "assets": "cp -R app.client/assets/ public/assets/",
     "app": "cp -R app.client/app/ public/app/",
+    "clean": "rm -r public/*",
     "serve": "node ./app",
-    "start": "npm run html && npm run build-css && npm run assets && npm run app && npm run serve"
+    "start": "npm run clean && npm run html && npm run build-css && npm run assets && npm run app && npm run serve"
   },
   "author": "Ariel Blanco",
   "license": "ISC",
