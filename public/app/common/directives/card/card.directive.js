@@ -5,19 +5,20 @@
 
   angular
     .module('testApp')
-    .directive('cardItem', todoItem);
+    .directive('cardItem', cardItem);
 
-  function todoItem() {
+  function cardItem() {
     var directive = {
       restrict: 'E',
-      replace: false,
-      templateUrl: 'common/directives/card/card.tpl.html',
+      replace: true,
+      templateUrl: 'app/common/directives/card/card.tpl.html',
       scope: {
-        'product'       : '=',
-        selected: false
+        'product'   : '=',
+        'lastone'   :'='
       }
     };
 
     return directive;
+    
   }
 })();

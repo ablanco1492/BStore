@@ -1,17 +1,26 @@
-<div ng-class="(product.description.length || product.showOff) ? 'col-md-6 col-sm-12' : 'col-md-3 col-sm-12'">
-    <div class="container--light-background card-container container-padded" ng-click="selected = !selected">
-        <ng-switch on="product.description.length">
+<div>
 
+<div class="col-md-3 col-sm-12" ng-if="lastone">
+    <div class="container--promo-background card-container container-padded card-container--promo">
+        <p class="card-container--promo__subheading">New Arrivals</p>
+        <h3 class="card-container--promo__heading">OG ERA LX WTAPS</h3>
+    </div>
+</div>
+
+
+<div ng-class="(product.description.length || product.showoff) ? 'col-md-6 col-sm-12' : 'col-md-3 col-sm-12'">
+    <div class="container--light-background card-container container-padded">
+        <ng-switch on="product.description != null && product.description.trim().length > 0">
             <div class="row detailed__row" ng-switch-when="true">
-                <div class="col-md-6 col-sm-6">
-                    <img class="img-responsive img--detailed" src="product.imgUrl" alt="">
+                <div class="col-md-6 col-sm-6 detailed__child">
+                    <img class="img-responsive img--detailed" ng-src="/assets/images/{{product.img}}" alt="">
                 </div>
 
-                <div class="col-md-6 col-sm-6 ">
+                <div class="col-md-6 col-sm-6 detailed__child">
                     <div class="card-container__tags tags--detailed" ng-if="product.tags.length > 0">
-                        <i class="zmdi zmdi-favorite tags__icon pull-left" ng-if="selected"></i>
-                        <span class="card-container__tag" ng-repeat="tag in product.tags" ng-class="'card-container__tag--green': tag.color=='green', 'card-container__tag--blue': tag.color == 'blue''">{{tag.text}}</span>
-                        <i class="zmdi zmdi-shopping-basket tags__icon pull-right" ng-if="selected"></i>
+                        <i class="zmdi zmdi-favorite tags__icon pull-left" ng-if="product.selected"></i>
+                        <span class="card-container__tag" ng-repeat="tag in product.tags" ng-class="{'card-container__tag--green': tag.color=='green', 'card-container__tag--blue': tag.color == 'blue'}">{{tag.text}}</span>
+                        <i class="zmdi zmdi-shopping-basket tags__icon pull-right" ng-if="product.selected"></i>
                     </div>
                     <div class="card-container__content content--detailed">
                         <h3 class="card-container__title">{{product.name}}</h3>
@@ -20,14 +29,16 @@
                         <p class="card-container__price">{{product.price | currency}}<span class="striketrough" ng-if="product.price.length">{{product.previousPrice | currency}}</span></p>
                     </div>
                 </div>
-            </div>
 
+            </div>
             <div ng-switch-default>
-                <div class="card-container__tags tags--detailed" ng-if="product.tags.length > 0">
-                    <span class="card-container__tag" ng-repeat="tag in product.tags" ng-class="'card-container__tag--green': tag.color=='green', 'card-container__tag--blue': tag.color == 'blue''">{{tag.text}}</span>
+                <div class="card-container__tags" ng-if="product.tags.length > 0">
+                    <i class="zmdi zmdi-favorite tags__icon pull-left" ng-if="product.selected"></i>
+                    <span class="card-container__tag" ng-repeat="tag in product.tags" ng-class="{'card-container__tag--green': tag.color=='green', 'card-container__tag--blue': tag.color == 'blue'}">{{tag.text}}</span>
+                    <i class="zmdi zmdi-shopping-basket tags__icon pull-right" ng-if="product.selected"></i>
                 </div>
                 <div class="card-container__content">
-                    <img class="img-responsive card-container__img" src="product.imgUrl" alt="">
+                    <img class="img-responsive card-container__img" ng-src="/assets/images/{{product.img}}" alt="">
                     <h3 class="card-container__title">{{product.name}}</h3>
                     <p class="card-container__subtitle">{{product.model}}</p>
                     <p class="card-container__description">{{product.description}}</p>
@@ -37,5 +48,5 @@
         </ng-switch>
 
     </div>
-
+</div>
 </div>

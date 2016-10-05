@@ -15,6 +15,7 @@ const mongoose = require('mongoose'),
         showoff: { type: Boolean, default: false },
         price: { type: Number, required: true },
         previousPrice: { type: Number },
+        selected: { type: Boolean, default: false },
         state: { type: String, required: true, minlength: 2, maxlength: 2 }
     });
 

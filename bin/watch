@@ -1,0 +1,1 @@
+nodemon -e scss -x "npm run html && npm run build-css && npm run assets && npm run app"

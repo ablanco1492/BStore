@@ -16,7 +16,7 @@
 
     productsData.getAllProducts()
       .then(function(data) {
-        vm.todoLicardsst = data;
+        vm.cards = data.data;
       });
     
     // vm.addTodo = function() {

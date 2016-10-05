@@ -71,14 +71,15 @@
  .content--detailed{
      position: absolute;
      top: 30;
-     margin: em(23px);
+     margin: em(23px) 0;
      text-align: left;
  }
 
  .img--detailed{
-     position: absolute;
-     top: 70;
-     left: 0;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     
  }
 
@@ -117,7 +118,7 @@
 
   .tags--detailed{
       text-align: justify;
-      margin: 0 em(23px) em(115px);
+      margin: 0;
  }
 
 
@@ -177,5 +178,13 @@
 
 .detailed__row{
     padding: em(35px) em(40px);
+    height: 100%;
+    margin: 0;
+}
+
+.detailed__child{
+    float: left;
+    height: 100%;
+    
 }
 

@@ -2,7 +2,7 @@
     <div class="container container_card">
         <div class="row">
             <div class="col-md-12 page-title">
-                <h2 class="page-title__heading">{{vm.title}}</h2>
+                <h2 class="page-title__heading">{{home.title}}</h2>
 
             </div>
         </div>
@@ -30,7 +30,8 @@
             </div>
         </div>
         <div class="row cards">
-            <card-directive ng-repeat="card in home.cards"></card-directive>
+            <card-item ng-repeat="card in home.cards" product='card' lastone='home.cards.length-1 == $index'>
+            </card-item>
             <div class="logo-filter" id="logo-filter" data-toggle="modal" data-target="#myModal">
 
             </div>

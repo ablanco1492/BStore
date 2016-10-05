@@ -11,7 +11,7 @@
     var directive = {
       restrict: 'E',
       replace: false,
-      templateUrl: 'common/directives/header/header.tpl.html',
+      templateUrl: 'app/common/directives/header/header.tpl.html',
       controller: HeaderController,
       controllerAs: 'header'
     };
